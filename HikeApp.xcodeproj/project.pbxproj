@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4A0A8822C1F800B003AFEA1 /* HikeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A0A8812C1F800B003AFEA1 /* HikeAppApp.swift */; };
+		F43259AF2C22279E00F258E5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43259AE2C22279E00F258E5 /* CardView.swift */; };
+		F4610AD42C28B67A0095D75F /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4610AD32C28B67A0095D75F /* CustomBackgroundView.swift */; };
+		F4610AD72C28B78C0095D75F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4610AD62C28B78C0095D75F /* ColorExtension.swift */; };
+		F4A0A8822C1F800B003AFEA1 /* HikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A0A8812C1F800B003AFEA1 /* HikeApp.swift */; };
 		F4A0A8842C1F800B003AFEA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A0A8832C1F800B003AFEA1 /* ContentView.swift */; };
 		F4A0A8862C1F800D003AFEA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A0A8852C1F800D003AFEA1 /* Assets.xcassets */; };
 		F4A0A8892C1F800D003AFEA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A0A8882C1F800D003AFEA1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F43259AE2C22279E00F258E5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F4610AD32C28B67A0095D75F /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
+		F4610AD62C28B78C0095D75F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F4A0A87E2C1F800B003AFEA1 /* HikeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HikeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4A0A8812C1F800B003AFEA1 /* HikeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeAppApp.swift; sourceTree = "<group>"; };
+		F4A0A8812C1F800B003AFEA1 /* HikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeApp.swift; sourceTree = "<group>"; };
 		F4A0A8832C1F800B003AFEA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4A0A8852C1F800D003AFEA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4A0A8882C1F800D003AFEA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -32,6 +38,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4610AD22C28B6560095D75F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F43259AE2C22279E00F258E5 /* CardView.swift */,
+				F4610AD32C28B67A0095D75F /* CustomBackgroundView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F4610AD52C28B7730095D75F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F4610AD62C28B78C0095D75F /* ColorExtension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		F4A0A8752C1F800B003AFEA1 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +74,10 @@
 		F4A0A8802C1F800B003AFEA1 /* HikeApp */ = {
 			isa = PBXGroup;
 			children = (
-				F4A0A8812C1F800B003AFEA1 /* HikeAppApp.swift */,
+				F4A0A8812C1F800B003AFEA1 /* HikeApp.swift */,
 				F4A0A8832C1F800B003AFEA1 /* ContentView.swift */,
+				F4610AD22C28B6560095D75F /* Component */,
+				F4610AD52C28B7730095D75F /* Utility */,
 				F4A0A8852C1F800D003AFEA1 /* Assets.xcassets */,
 				F4A0A8872C1F800D003AFEA1 /* Preview Content */,
 			);
@@ -138,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4A0A8842C1F800B003AFEA1 /* ContentView.swift in Sources */,
-				F4A0A8822C1F800B003AFEA1 /* HikeAppApp.swift in Sources */,
+				F43259AF2C22279E00F258E5 /* CardView.swift in Sources */,
+				F4A0A8822C1F800B003AFEA1 /* HikeApp.swift in Sources */,
+				F4610AD42C28B67A0095D75F /* CustomBackgroundView.swift in Sources */,
+				F4610AD72C28B78C0095D75F /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
