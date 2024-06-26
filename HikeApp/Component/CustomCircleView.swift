@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct CustomCircleView: View {
+    @State private var isAnimateGradient: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Circle()
+            .fill(
+                LinearGradient(
+                    colors: [
+                        .colorIndigoMedium,
+                        .colorSalmonLight
+                    ],
+                    startPoint: isAnimateGradient ? .topLeading : .bottomLeading,
+                    endPoint: isAnimateGradient ? .bottomTrailing : .topTrailing
+                )
+            )
+            .onAppear {
+                withAnimation(.linear(duration: 3.0).repeatForever(autoreverses: true)) {
+                    isAnimateGradient.toggle()
+                }
+            }
+            .frame(width: 256, height: 256)
     }
 }
 
