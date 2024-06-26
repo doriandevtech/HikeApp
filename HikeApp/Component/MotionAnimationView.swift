@@ -9,10 +9,19 @@ import SwiftUI
 
 struct MotionAnimationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Circle()
+                .foregroundStyle(.white)
+        } //: ZSTACK
+        .frame(width: 256, height: 256)
     }
 }
 
 #Preview {
-    MotionAnimationView()
+    ZStack {
+        Color.teal
+            .ignoresSafeArea()
+        
+        MotionAnimationView()
+    }
 }
