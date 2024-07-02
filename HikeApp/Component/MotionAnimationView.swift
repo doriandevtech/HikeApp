@@ -11,6 +11,7 @@ struct MotionAnimationView: View {
     // MARK: PROPERTIES
     
     @State private var randomCircle: Int = Int.random(in: 6...12)
+    @State private var isAnimating: Bool = false
     
     // MARK: FUNCTIONS
     
@@ -25,6 +26,7 @@ struct MotionAnimationView: View {
     }
     
     // 3. RANDOM SCALE
+    
     
     // 4. RANDOM SPEED
     
@@ -42,6 +44,14 @@ struct MotionAnimationView: View {
                         x: randomCoordinate(),
                         y: randomCoordinate()
                     )
+                    .onAppear(perform: {
+                        withAnimation(
+                            .interpolatingSpring(stiffness: 0.5, damping: 0.5)
+                            .repeatForever()
+                        ) {
+                        isAnimating = true
+                        }
+                    })
             }
         } //: ZSTACK
         .frame(width: 256, height: 256)
