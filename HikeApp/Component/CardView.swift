@@ -12,6 +12,7 @@ struct CardView: View {
     
     @State private var imageNumber: Int = 1
     @State private var randomNumber: Int = 1
+    @State private var isShowingSheet: Bool = false
     
     // MARK: - FUNCTIONS
     
@@ -64,10 +65,15 @@ struct CardView: View {
                         Button {
                             // ACTION: Show a sheet
                             print("the button was pressed.")
+                            isShowingSheet.toggle()
                         } label: {
                             CustomButtonView()
                         }
-                        
+                        .sheet(isPresented: $isShowingSheet) {
+                            SettingsView()
+                                .presentationDragIndicator(.visible)
+                                .presentationDetents([.medium, .large])
+                        }
                     }
                     
                     Text("Fun and enjoyable activity for friends and families.")
