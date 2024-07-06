@@ -69,6 +69,18 @@ struct SettingsView: View {
             
             // MARK: - SECTION: ABOUT
             
+            Section(
+                header: Text("ABOU THE APP"),
+                footer: HStack {
+                    Spacer()
+                    Text("Copyright © All rights reserved.")
+                    Spacer()
+                }
+                    .padding(.vertical, 8)
+            ) {
+                Text("List Row")
+            } //: SECTION
+            
         }
     }
 }
