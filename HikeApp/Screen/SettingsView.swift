@@ -128,8 +128,9 @@ struct SettingsView: View {
                 CustomListRowView(
                     rowLabel: "Website",
                     rowIcon: "globe",
-                    rowContent: "https://MySite.com",
-                    rowTintColor: .pink
+                    rowTintColor: .indigo,
+                    rowLinkLabel: "Apple",
+                    rowLinkDestination: "https://www.apple.com"
                 )
                 
                 
