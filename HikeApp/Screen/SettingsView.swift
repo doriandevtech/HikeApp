@@ -85,6 +85,8 @@ struct SettingsView: View {
                 LabeledContent {
                     // Content
                     Text("Hike")
+                        .foregroundStyle(.primary)
+                        .fontWeight(.heavy)
                 } label: {
                     // Label
                     HStack {
