@@ -9,10 +9,30 @@ import SwiftUI
 
 struct CustomListRowView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LabeledContent {
+            // Content
+            Text("Hike")
+                .foregroundStyle(.primary)
+                .fontWeight(.heavy)
+        } label: {
+            // Label
+            HStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8)
+                        .frame(width: 30, height: 30)
+                        .foregroundStyle(.blue)
+                    Image(systemName: "apps.iphone")
+                        .foregroundStyle(.white)
+                        .fontWeight(.semibold)
+                }
+                Text("Application")
+            }
+        }
     }
 }
 
 #Preview {
-    CustomListRowView()
+    List() {
+        CustomListRowView()
+    }
 }
