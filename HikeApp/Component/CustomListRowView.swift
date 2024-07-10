@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct CustomListRowView: View {
+    // MARK: - PROPERTIES
+    
+    @State var rowLabel: String
+    @State var rowIcon: String
+    @State var rowContent: String
+    @State var rowTintColor: Color
+    
     var body: some View {
         LabeledContent {
             // Content
-            Text("Hike")
+            Text(rowContent)
                 .foregroundStyle(.primary)
                 .fontWeight(.heavy)
         } label: {
@@ -20,12 +27,12 @@ struct CustomListRowView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
                         .frame(width: 30, height: 30)
-                        .foregroundStyle(.blue)
-                    Image(systemName: "apps.iphone")
+                        .foregroundStyle(rowTintColor)
+                    Image(systemName: rowIcon)
                         .foregroundStyle(.white)
                         .fontWeight(.semibold)
                 }
-                Text("Application")
+                Text(rowLabel)
             }
         }
     }
@@ -33,6 +40,11 @@ struct CustomListRowView: View {
 
 #Preview {
     List() {
-        CustomListRowView()
+        CustomListRowView(
+            rowLabel: "Designer",
+            rowIcon: "paintpalette",
+            rowContent: "John Doe",
+            rowTintColor: .pink
+        )
     }
 }
