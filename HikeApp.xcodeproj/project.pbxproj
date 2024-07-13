@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		F43259AE2C22279E00F258E5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F44222F52C42A77100FE0DB5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F4610AD32C28B67A0095D75F /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		F4610AD62C28B78C0095D75F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F4610AD82C28BE7A0095D75F /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		F4A0A8802C1F800B003AFEA1 /* HikeApp */ = {
 			isa = PBXGroup;
 			children = (
+				F44222F52C42A77100FE0DB5 /* README.md */,
 				F4A0A8812C1F800B003AFEA1 /* HikeApp.swift */,
 				F485E19B2C3709E800F859A5 /* Screen */,
 				F4610AD22C28B6560095D75F /* Component */,
