@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - PROPERTIES
+    
+    private let alternateAppIcon: [String] = [
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom",
+        "AppIcon-Camera",
+        "AppIcon-Backpack",
+        "AppIcon-Campfire",
+    ]
+    
+    
     var body: some View {
         List {
             // MARK: - SECTION: HEADER
@@ -66,6 +78,42 @@ struct SettingsView: View {
             .listRowSeparator(.hidden)
             
             // MARK: - SECTION: ICONS
+            
+            Section(header: Text("Alternate Icons")) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(alternateAppIcon.indices, id: \.self) { item in
+                            Button {
+                                print("Icon \(alternateAppIcon[item]) was pressed")
+                                
+                                UIApplication.shared.setAlternateIconName(alternateAppIcon[item]) { error in
+                                    if error != nil {
+                                        print("Failed request to update the app's icon: \(String(describing: error?.localizedDescription))")
+                                    } else {
+                                        print("Success : You have changed the app's icon to \(alternateAppIcon[item])")
+                                    }
+                                }
+                            } label: {
+                                Image("\(alternateAppIcon[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .clipShape(.rect(cornerRadius: 16))
+                            }
+                        .buttonStyle(.borderless)
+                        }
+                    }
+                } //: SCROLL VIEW
+                .padding(.top, 12)
+                
+                Text("Choose your favorite app icon from the collection above.")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.secondary)
+                    .font(.footnote)
+                    .padding(.bottom, 12)
+            } //: SECTION
+                .listRowSeparator(.hidden)
             
             // MARK: - SECTION: ABOUT
             
