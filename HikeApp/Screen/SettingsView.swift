@@ -11,12 +11,12 @@ struct SettingsView: View {
     // MARK: - PROPERTIES
     
     private let alternateAppIcon: [String] = [
-        "AppIcon-MagnifyingGlass-Preview",
-        "AppIcon-Map-Preview",
-        "AppIcon-Mushroom-Preview",
-        "AppIcon-Camera-Preview",
-        "AppIcon-Backpack-Preview",
-        "AppIcon-Campfire-Preview",
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom",
+        "AppIcon-Camera",
+        "AppIcon-Backpack",
+        "AppIcon-Campfire",
     ]
     
     
@@ -84,9 +84,17 @@ struct SettingsView: View {
                     HStack(spacing: 12) {
                         ForEach(alternateAppIcon.indices, id: \.self) { item in
                             Button {
-                                print("AppIcon button was pressed")
+                                print("Icon \(alternateAppIcon[item]) was pressed")
+                                
+                                UIApplication.shared.setAlternateIconName(alternateAppIcon[item]) { error in
+                                    if error != nil {
+                                        print("Failed request to update the app's icon: \(String(describing: error?.localizedDescription))")
+                                    } else {
+                                        print("Success : You have changed the app's icon to \(alternateAppIcon[item])")
+                                    }
+                                }
                             } label: {
-                                Image(alternateAppIcon[item])
+                                Image("\(alternateAppIcon[item])-Preview")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 80, height: 80)
